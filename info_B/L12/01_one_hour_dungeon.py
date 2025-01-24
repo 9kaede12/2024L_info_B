@@ -642,7 +642,7 @@ def main():
         se[0].play()
         emy_step = 30
       if tmr == 9:
-        dmg = emy_step + random.randint(0, 9)
+        dmg = emy_str + random.randint(0, 9)
         set_message(str(dmg)+"pts of damage!")
         dmg_eff = 5
         emy_step = 0
@@ -653,10 +653,10 @@ def main():
           # 「戦闘敗北」を代入
           idx = 15
           tmr = 0
-        if tmr == 20:
-          # 「プレイヤーのターン」を代入
-          idx = 11
-          tmr = 0
+      if tmr == 20:
+        # 「プレイヤーのターン」を代入
+        idx = 11
+        tmr = 0
 
     # 逃げられる？
     elif idx == 14:
@@ -740,7 +740,7 @@ def main():
       img_rz = pygame.transform.rotozoom(imgEffect[1], 30*tmr, (12-tmr)/8)
       X = 440-img_rz.get_width()/2
       Y = 360-img_rz.get_height()/2
-      screen.blit(img_rz  , [X, Y])
+      screen.blit(img_rz, [X, Y])
       if tmr == 1:
         set_message("Blaze gem!")
         se[1].play()
@@ -749,6 +749,7 @@ def main():
       if tmr == 11:
         dmg = 1000
         # 「プレイヤーの攻撃」を代入
+        idx = 12
         tmr = 4
 
     # 戦闘終了
