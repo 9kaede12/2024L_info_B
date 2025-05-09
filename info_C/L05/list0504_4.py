@@ -1,7 +1,7 @@
 import random
 import datetime
 
-ALP = ["A", "B", "C", "D", "E", "F", "G"]
+ALP = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 r = random.choice(ALP)
 alp = ""
 for i in ALP:
@@ -13,6 +13,6 @@ ans = input("抜けているアルファベットは？")
 if ans == r:
     print("正解です")
     et = datetime.datetime.now()
-    print((et - st).seconds)
+    print(str((et - st).seconds) + "秒掛かりました。")
 else:
-    print("不正解です")
+    print("違います")
