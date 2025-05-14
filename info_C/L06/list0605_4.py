@@ -19,7 +19,7 @@ def click_btn2():
 	}
 	label2["bg"] = color_map[label2["text"]]
 	# 文字色を調整（背景が黒か青の場合は白文字、それ以外は黒文字）
-	label2["fg"] = "white" if label2["text"] == "ブラック" or label2["text"] == "ブルー" else "black"
+	label2["fg"] = "white" if label2["text"] == "ブラック" or label2["text"] == "ブルー" or label2["text"] == "レッド" or label2["text"] == "グリーン" else "black"
 
 	label2.update()
 
@@ -28,7 +28,7 @@ root.title("おみくじソフト")
 root.resizable(False, False)
 canvas = tkinter.Canvas(root, width=800, height=600)
 canvas.pack()
-gazou = tkinter.PhotoImage(file="info_B/L06/images/miko.png")
+gazou = tkinter.PhotoImage(file="info_C/L06/images/miko.png")
 canvas.create_image(400, 300, image=gazou)
 
 label1 = tkinter.Label(root, text="？？", font=("Times New Roman", 40), bg="black")
